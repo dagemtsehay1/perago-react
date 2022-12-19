@@ -14,6 +14,7 @@ import {
   IconUserPlus,
   IconSettings,
 } from "@tabler/icons";
+import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -37,14 +38,14 @@ const useStyles = createStyles((theme) => ({
   },
 
   active: {
-    "&, &:hover": {
-      backgroundColor: theme.fn.variant({
-        variant: "light",
-        color: theme.primaryColor,
-      }).background,
-      color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-        .color,
-    },
+    // "&, &:hover": {
+    //   backgroundColor: theme.fn.variant({
+    //     variant: "light",
+    //     color: theme.primaryColor,
+    //   }).background,
+    //   color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
+    //     .color,
+    // },
   },
 }));
 
@@ -83,7 +84,18 @@ export function NavbarMinimal() {
       {...link}
       key={link.label}
       active={index === active}
-      onClick={() => setActive(index)}
+      onClick={() => {
+        setActive(index);
+        if(index == 0){
+          window.location.href = "/"
+        }
+        if(index == 1){
+          window.location.href = "add"
+        }
+        if(index == 2){
+          window.location.href = "update"
+        }
+      }}
     />
   ));
 
