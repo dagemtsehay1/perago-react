@@ -21,7 +21,7 @@ export function CustomButton(props:any) {
       <div className="max-h-0 peer-checked:max-h-screen">
       {props.child.length !=0 && props.child.map((e:any)=>{
         return <div className="ml-5">
-          <CustomButton id={e["id"]} name={e["name"]} child={data.filter((k:any)=>k["parentId"] ==e["id"])}/>
+          <CustomButton id={e[1]["id"]} name={e[1]["name"]} child={data.filter((k:any)=>k[1]["parentId"] ==e[1]["id"])}/>
         </div>
       })}
       </div>
