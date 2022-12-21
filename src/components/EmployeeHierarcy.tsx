@@ -11,7 +11,7 @@ function EmployeeHierarchy(){
 
         
         {parentData.map((e:any)=>{
-            return <CustomButton id={e[1]["id"]} name={e[1]["name"]} child={data.filter((k:any)=>k[1]["parentId"] ==e[1]["id"])}/>
+            return <CustomButton orignId={e[0]} id={e[1]["id"]} name={e[1]["name"]} child={data.filter((k:any)=>k[1]["parentId"] ==e[1]["id"])}/>
         })}
                 
                 

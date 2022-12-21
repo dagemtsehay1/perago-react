@@ -1,8 +1,6 @@
 import { MantineProvider } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import "./App.css";
-import Header from "./components/Header";
-import { NavbarMinimal } from "./components/Navbar";
 import "./index.css";
 import MyRoutes from "./MyRoutes";
 
@@ -15,13 +13,7 @@ function App() {
   });
   return (
     <MantineProvider>
-      <div className="flex">
-        <NavbarMinimal/>
-        <div className="w-full">
-          <Header/>
-        <MyRoutes />
-        </div>
-      </div>
+      <MyRoutes />
     </MantineProvider>
   );
 }

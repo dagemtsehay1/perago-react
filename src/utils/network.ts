@@ -8,3 +8,14 @@ export async function getAllHierarchy (){
 
   return rawD;
 };
+
+
+export async function addHierarchy(data:any){
+  let res = await Axios.post(baseUrl,data,{
+    headers:{
+      "Content-Type": "application/json",
+    }
+  })
+
+  return res.status == 200 ? true : false;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../imgs/logo.png";
+import { useNavigate } from "react-router-dom";
 import {
   Navbar,
   Center,
@@ -78,25 +79,32 @@ const mockdata = [
 
 export function NavbarMinimal() {
   const [active, setActive] = useState(2);
+  const navigate = useNavigate();
 
   const links = mockdata.map((link, index) => (
-    <NavbarLink
-      {...link}
-      key={link.label}
-      active={index === active}
-      onClick={() => {
-        setActive(index);
-        if(index == 0){
-          window.location.href = "/"
-        }
-        if(index == 1){
-          window.location.href = "add"
-        }
-        if(index == 2){
-          window.location.href = "update"
-        }
-      }}
-    />
+    // <Link to="/add">
+      <NavbarLink
+        {...link}
+        key={link.label}
+        active={index === active}
+        onClick={() => {
+          setActive(index);
+          if(index == 0){
+            // window.location.href = "/"
+            // <Link to={"/"}></Link>
+            navigate("/");
+          }
+          if(index == 1){
+            // window.location.href = "add"
+            navigate('/add')
+          }
+          if(index == 2){
+            // window.location.href = "update"
+            // navigate("update")
+          }
+        }}
+      />
+    // </Link>
   ));
 
   return (
