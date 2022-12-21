@@ -3,6 +3,6 @@ import rawDataReducer from "./rawDataReducer";
 
 export default configureStore({
     reducer:{
-        rawData: rawDataReducer
+        rawData: rawDataReducer,
     }
 });
