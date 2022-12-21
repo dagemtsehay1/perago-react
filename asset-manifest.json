@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/perago-react/static/css/main.b7932a3b.css",
+    "main.js": "/perago-react/static/js/main.51bdd967.js",
+    "static/js/787.7f3f0319.chunk.js": "/perago-react/static/js/787.7f3f0319.chunk.js",
+    "static/media/logo.png": "/perago-react/static/media/logo.0c5d772a7e382017328b.png",
+    "index.html": "/perago-react/index.html",
+    "main.b7932a3b.css.map": "/perago-react/static/css/main.b7932a3b.css.map",
+    "main.51bdd967.js.map": "/perago-react/static/js/main.51bdd967.js.map",
+    "787.7f3f0319.chunk.js.map": "/perago-react/static/js/787.7f3f0319.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7932a3b.css",
+    "static/js/main.51bdd967.js"
+  ]
+}
