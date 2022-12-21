@@ -15,7 +15,6 @@ import {
   IconUserPlus,
   IconSettings,
 } from "@tabler/icons";
-import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -39,14 +38,14 @@ const useStyles = createStyles((theme) => ({
   },
 
   active: {
-    // "&, &:hover": {
-    //   backgroundColor: theme.fn.variant({
-    //     variant: "light",
-    //     color: theme.primaryColor,
-    //   }).background,
-    //   color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-    //     .color,
-    // },
+    "&, &:hover": {
+      backgroundColor: theme.fn.variant({
+        variant: "light",
+        color: theme.primaryColor,
+      }).background,
+      color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
+        .color,
+    },
   },
 }));
 
@@ -74,7 +73,6 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 const mockdata = [
   { icon: IconHome2, label: "Home" },
   { icon: IconUserPlus, label: "Add Employee Hierarchy" },
-  { icon: IconSettings, label: "Settings" },
 ];
 
 export function NavbarMinimal() {
@@ -82,7 +80,6 @@ export function NavbarMinimal() {
   const navigate = useNavigate();
 
   const links = mockdata.map((link, index) => (
-    // <Link to="/add">
       <NavbarLink
         {...link}
         key={link.label}
@@ -90,21 +87,15 @@ export function NavbarMinimal() {
         onClick={() => {
           setActive(index);
           if(index == 0){
-            // window.location.href = "/"
-            // <Link to={"/"}></Link>
             navigate("/");
           }
           if(index == 1){
-            // window.location.href = "add"
             navigate('/add')
           }
-          if(index == 2){
-            // window.location.href = "update"
-            // navigate("update")
-          }
+    
         }}
       />
-    // </Link>
+    
   ));
 
   return (
